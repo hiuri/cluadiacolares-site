@@ -4,138 +4,247 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Início - Cláudia Colares</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Logo-Claudia-Colares.png" type="image/png">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+
   <style>
     body {
-      background-color: #f5f5f5;
+      margin: 0;
+      background-color: #fefefe;
       font-family: 'Helvetica Neue', sans-serif;
+      color: #333;
     }
+
+    .navbar {
+      background-color: white;
+      padding: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
     .navbar-brand img {
-      max-height: 100px;
+      max-height: 80px;
     }
+
     .hero-banner {
       background: url('b1.png') no-repeat center center/cover;
-      height: 100vh;
+      height: 60vh;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .intro {
-      padding: 60px 20px;
-      background-color: #fff;
-      color: #222;
+
+    .sobre {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sobre + .sobre {
+      margin-top: 5px;
+    }
+
+    .sobre .img-col {
+      flex: 1;
+      max-width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sobre .img-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .sobre .text-col {
+      flex: 1;
+      max-width: 50%;
+      padding: 60px;
+      background-color: white;
+    }
+
+    .sobre .text-col p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 0;
       text-align: center;
     }
-    .sobre {
-      background-color: #ffffff;
-      padding: 60px 20px;
+
+    .img-claudia {
+      max-width: 40%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
-    .sobre p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .destaques {
-      background-color: #fff;
-      padding: 60px 20px;
-    }
-    .destaques h3 {
-      margin-bottom: 30px;
-    }
+
     footer {
       background-color: #2b2b2b;
       color: white;
       padding: 40px 0;
+      font-size: 0.95rem;
+    }
+
+    /* Botão "Voltar ao Topo" */
+    #voltarTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #2b2b2b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 20px;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #voltarTopo:hover {
+      background-color: #444;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .hero-banner {
+        height: 40vh;
+        background-position: top center;
+      }
+
+      .sobre {
+        flex-direction: column;
+      }
+
+      .sobre .img-col,
+      .sobre .text-col {
+        max-width: 100%;
+      }
+
+      .sobre .text-col {
+        flex: 1;
+        max-width: 50%;
+        padding: 60px;
+        background-color: white;
+        text-align: center;
+      }
+
+      .img-claudia {
+        max-width: 60%;
+      }
+
+      footer .row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .col-md-6 {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-    <div class="container-fluid px-4">
-      <a class="navbar-brand me-auto" href="index.html">
-        <img src="logo.png" alt="Logo Cláudia Colares">
+  <!-- Navbar com menu lateral -->
+  <nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand ms-3" href="index.html">
+        <img src="Logo-Claudia-Colares.png" alt="Logo Cláudia Colares">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="obras.html">Obras</a></li>
-          <li class="nav-item"><a class="nav-link" href="pomarelhos.html">Pomarelhos</a></li>
-        </ul>
-      </div>
+     <!-- <button class="btn btn-outline-secondary me-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+        ☰
+      </button> -->
     </div>
   </nav>
 
-  <!-- Banner como fundo -->
+  <!-- Menu lateral (offcanvas) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li><a href="#pomarelhos" class="nav-link">Pomarelhos</a></li>
+        <li><a href="#artista" class="nav-link">A Artista</a></li>
+        <li><a href="#footer" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </div> 
+
+  <!-- Banner -->
   <section class="hero-banner"></section>
 
-
-
-  <!-- Corpo-->
-  <section class="sobre">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="Banner Pomarelhos - PAC.png" alt="Cláudia Colares" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam HoCo 
-            Artwork Co.
-            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-            tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat.
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at 
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
-            luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-        </div>
-      </div>
+  <!-- Sessão Pomarelhos -->
+  <section class="sobre" id="pomarelhos">
+    <div class="img-col">
+      <a href="https://www.google.com/maps/place/Pomarelhos..." target="_blank">
+        <img src="pomarelhos.png" alt="Pomarelhos">
+      </a>
+    </div>
+    <div class="text-col">
+      <p>
+        A instalação do ateliê em Pomarelhos, viabilizou a percepção do potencial cultural que tal atitude manifesta. Em certo sentido, implantou-se mais um núcleo cultural na região.
+        A presença desse aparelho cultural viabiliza ações culturais e educacionais voltadas para a arte e o convívio entre artistas e comunidade. 
+        A pretensão da artista Claudia Colares com a presença deste ateliê para essa nova etapa que se iniciará no lançamento do projeto “John Cabeça de Lobo”, 
+        é de consolidar este ponto cultural em Pomarelhos.
+      </p>
     </div>
   </section>
 
-  <!-- Destaques -->
-<section class="destaques">
-  <div class="container">
-    <h3 class="text-center">Destaques</h3>
-    <div class="row g-4">
-      <div class="col-md-4 text-center">
-        <img src="b1.png" alt="John Cabeça de Lobo" class="img-fluid rounded mb-3">
-        <h5>Exposição "John Cabeça de Lobo"</h5>
-        <p>17 de junho à 15 de agosto de 2025<br>Curadoria de Neusa Mendes</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="b1.png" alt="Residência Artística" class="img-fluid rounded mb-3">
-        <h5>Projeto Residência Artística</h5>
-        <p>Lisboa - 2022</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="b1.png" alt="Exposição Internacional" class="img-fluid rounded mb-3">
-        <h5>Exposição Internacional</h5>
-        <p>Paris - 2023</p>
+  <!-- Sessão A artista -->
+  <section class="sobre" id="artista">
+    <div class="text-col">
+      <p>
+        Cláudia Colares nasceu no Ceará. Ainda miúda começou a desenhar, assim como fazem as crianças nessa fase da vida, mas Cláudia nunca mais parou.
+        Foi a partir do encontro com o Mestre cearense Batista Sena que Cláudia redimensionou sua visão sobre arte e cultura e desde então passou a dedicar-se definitivamente às artes plásticas.            
+      </p>
+    </div>
+    <div class="img-col">
+      <img src="Foto-claudia.jpg" alt="Cláudia Colares" class="img-claudia">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-start">
+          <p class="mb-1">📞 +351 913 469 871</p>
+          <p class="mb-0">📧 claudiacolares@hotmail.com</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <p class="mb-1">📍 Pomarelios, Vila Real - Portugal</p>
+          <p class="mb-0">© 2025 Claudia Colares All Rights Reserved | CNPJ 28789745000109</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Footer-->
+  <!-- Botão Voltar ao Topo -->
+  <button id="voltarTopo" title="Voltar ao topo">↑</button>
 
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 text-start">
-        <p class="mb-1">+351 913 469 871</p>
-        <p class="mb-0">claudiacolares@hotmail.com</p>
-      </div>
-      <div class="col-md-6 text-end">
-        <p class="mb-1">Pomarelios, Vila Real - Portugal</p>
-        <p class="mb-0">© 2025 Claudia Colares All Rights Reserved | CNPJ 28789745000109</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btnTopo = document.getElementById("voltarTopo");
+    window.onscroll = () => {
+      btnTopo.style.display = (window.scrollY > 300) ? "block" : "none";
+    };
+    btnTopo.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
 </body>
 </html>
