@@ -30,12 +30,15 @@
     }
 
     .hero-banner {
-      background: url('b1.png') no-repeat center center/cover;
-      height: 60vh;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .sobre {
@@ -116,11 +119,6 @@
 
     /* RESPONSIVO */
     @media (max-width: 768px) {
-      .hero-banner {
-        height: 40vh;
-        background-position: top center;
-      }
-
       .sobre {
         flex-direction: column;
       }
@@ -131,10 +129,7 @@
       }
 
       .sobre .text-col {
-        flex: 1;
-        max-width: 50%;
-        padding: 60px;
-        background-color: white;
+        padding: 40px 20px;
         text-align: center;
       }
 
@@ -156,35 +151,19 @@
 </head>
 <body>
 
-  <!-- Navbar com menu lateral -->
+  <!-- Navbar -->
   <nav class="navbar navbar-light sticky-top">
     <div class="container-fluid p-0">
       <a class="navbar-brand ms-3" href="index.html">
         <img src="Logo-Claudia-Colares.png" alt="Logo Cláudia Colares">
       </a>
-     <!-- <button class="btn btn-outline-secondary me-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
-        ☰
-      </button> -->
     </div>
   </nav>
 
-  <!-- Menu lateral (offcanvas) -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Menu</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="list-unstyled">
-        <li><a href="#pomarelhos" class="nav-link">Pomarelhos</a></li>
-        <li><a href="#artista" class="nav-link">A Artista</a></li>
-        <li><a href="#footer" class="nav-link">Contato</a></li>
-      </ul>
-    </div>
-  </div> 
-
-  <!-- Banner -->
-  <section class="hero-banner"></section>
+  <!-- Banner com imagem completa -->
+  <section class="hero-banner">
+    <img src="b1.png" alt="Banner">
+  </section>
 
   <!-- Sessão Pomarelhos -->
   <section class="sobre" id="pomarelhos">
@@ -207,7 +186,7 @@
   <section class="sobre" id="artista">
     <div class="text-col">
       <p>
-        Cláudia Colares nasceu no Ceará. Ainda miúda começou a desenhar, assim como fazem as crianças nessa fase da vida, mas Cláudia nunca mais parou.
+        Claudia Colares nasceu no Ceará. Ainda miúda começou a desenhar, assim como fazem as crianças nessa fase da vida, mas Cláudia nunca mais parou.
         Foi a partir do encontro com o Mestre cearense Batista Sena que Cláudia redimensionou sua visão sobre arte e cultura e desde então passou a dedicar-se definitivamente às artes plásticas.            
       </p>
     </div>
@@ -221,11 +200,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-start">
-          <p class="mb-1">📞 +351 913 469 871</p>
-          <p class="mb-0">📧 claudiacolares@hotmail.com</p>
+          <p class="mb-1"> +351 913 469 871</p>
+          <p class="mb-0"> claudiacolares@hotmail.com</p>
         </div>
         <div class="col-md-6 text-end">
-          <p class="mb-1">📍 Pomarelios, Vila Real - Portugal</p>
+          <p class="mb-1"> Pomarelios, Vila Real - Portugal</p>
           <p class="mb-0">© 2025 Claudia Colares All Rights Reserved | CNPJ 28789745000109</p>
         </div>
       </div>
