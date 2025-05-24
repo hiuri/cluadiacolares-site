@@ -4,114 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Início - Cláudia Colares</title>
-
-  <!-- Favicon -->
   <link rel="icon" href="Logo-Claudia-Colares.png" type="image/png">
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
       background-color: #fefefe;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       color: #333;
-      line-height: 1.8;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
     }
 
     .navbar {
       background-color: white;
-      padding: 0.5rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      padding: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .navbar-brand img {
-      max-height: 70px;
-      transition: all 0.3s ease;
+      max-height: 80px;
     }
 
     .hero-banner {
       width: 100%;
       height: auto;
       overflow: hidden;
-      position: relative;
-      margin-bottom: 20px;
     }
 
     .hero-banner img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.3s ease;
     }
 
-    .hero-banner:hover img {
-      transform: scale(1.02);
+    .espacamento {
+      padding: 60px 0;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #888;
     }
 
     .sobre {
       display: flex;
       flex-wrap: wrap;
-      align-items: stretch;
-      margin: 4rem 0;
-      position: relative;
+      align-items: center;
+      padding: 0;
+      margin: 0;
     }
 
-    .pomarelhos-wrapper {
-      position: relative;
-      width: 90%;
-      margin: 0 auto;
-      border: 2px solid #000;
-      padding: 2rem;
-      overflow: visible;
+    .sobre + .sobre {
+      margin-top: 5px;
     }
 
     .sobre .img-col {
       flex: 1;
       max-width: 50%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      position: relative;
-      margin-left: -5vw;
     }
 
     .sobre .img-col img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .sobre .img-col img:hover {
-      transform: scale(1.02);
     }
 
     .sobre .text-col {
       flex: 1;
       max-width: 50%;
-      padding: 3rem;
+      padding: 60px;
       background-color: white;
-      display: flex;
-      align-items: center;
     }
 
     .sobre .text-col p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       line-height: 1.8;
       margin-bottom: 0;
       text-align: center;
-      color: #2b2b2b;
     }
 
     .img-claudia {
@@ -119,25 +88,103 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      border-radius: 5px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
     }
 
-    .img-claudia:hover {
+    .galeria {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+
+    .galeria h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .galeria .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .galeria .col-md-4 {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
       transform: scale(1.05);
     }
 
-    footer {
-      background-color: #2b2b2b;
+    .cta {
+      background: linear-gradient(135deg, #faf9f8, #c9c7c5);
       color: white;
-      padding: 3rem 0;
-      font-size: 1rem;
+      text-align: center;
+      padding: 80px 20px;
     }
 
-    footer p {
-      margin-bottom: 0.5rem;
-      opacity: 0.9;
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta a {
+      background-color: white;
+      color: #e6d8d4;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #ff7e5f;
+      color: white;
+    }
+
+    footer {
+      background-color: #1e1717;
+      color: #999;
+      padding: 60px 0;
+      font-size: 0.95rem;
+    }
+    
+    footer a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    @font-face {
+    font-family: 'Perpetua';
+    src: url('fonts/PERTIBD.TTF') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      src: url('fonts/Lato-Regular.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1, h2, h3, .titulo {
+      font-family: 'Perpetua', serif;
     }
 
     #voltarTopo {
@@ -147,29 +194,21 @@
       background-color: #2b2b2b;
       color: white;
       border: none;
-      padding: 15px 20px;
+      padding: 10px 15px;
       border-radius: 50px;
       font-size: 20px;
       display: none;
       z-index: 999;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     #voltarTopo:hover {
       background-color: #444;
-      transform: translateY(-3px);
     }
 
     @media (max-width: 768px) {
       .sobre {
         flex-direction: column;
-        margin: 2rem 0;
-      }
-
-      .pomarelhos-wrapper {
-        width: 95%;
-        padding: 1rem;
       }
 
       .sobre .img-col,
@@ -177,25 +216,18 @@
         max-width: 100%;
       }
 
-      .sobre .img-col {
-        margin-left: 0;
-        margin-bottom: 1rem;
-      }
-
       .sobre .text-col {
-        padding: 1.5rem;
-      }
-
-      .sobre .text-col p {
-        font-size: 1.1rem;
+        padding: 40px 20px;
+        text-align: center;
       }
 
       .img-claudia {
-        max-width: 70%;
+        max-width: 60%;
       }
 
-      footer {
-        padding: 2rem 0;
+      .galeria .col-md-4 {
+        flex: 0 0 80%;
+        max-width: 80%;
       }
 
       footer .row {
@@ -205,25 +237,13 @@
 
       footer .col-md-6 {
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 10px;
       }
     }
-
-    @media (max-width: 768px) {
-      footer .row {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      footer .col-md-6 {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
-    }
-    
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-light sticky-top">
     <div class="container-fluid p-0">
@@ -233,35 +253,46 @@
     </div>
   </nav>
 
-  <!-- Banner com imagem completa -->
+  <!-- Banner -->
   <section class="hero-banner">
     <img src="b1.png" alt="Banner">
   </section>
 
-  <!-- Sessão Pomarelhos -->
-  <div class="pomarelhos-wrapper">
-    <section class="sobre" id="pomarelhos">
-      <div class="img-col">
-        <a href="https://www.google.com/maps/place/Pomarelhos..." target="_blank">
-          <img src="pomarelhos.png" alt="Pomarelhos">
-        </a>
-      </div>
-      <div class="text-col">
-        <p>
-          A instalação do ateliê em Pomarelhos, viabilizou a percepção do potencial cultural que tal atitude manifesta. Em certo sentido, implantou-se mais um núcleo cultural na região.
-          A presença desse aparelho cultural viabiliza ações culturais e educacionais voltadas para a arte e o convívio entre artistas e comunidade. 
-          A pretensão da artista Claudia Colares com a presença deste ateliê para essa nova etapa que se iniciará no lançamento do projeto "John Cabeça de Lobo", 
-          é de consolidar este ponto cultural em Pomarelhos.
-        </p>
-      </div>
-    </section>
-  </div>
+  <!-- Espaço e Sessão intermediária -->
+  <section class="espacamento" style="background-color: #f4f4f4; padding: 80px 20px; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; color: #222;">
+        Conheça Pomarelhos
+      </h2>
+      <p style="font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto;">
+        Um lugar onde a natureza encontra a arte. É em Pomarelhos que o ateliê de Cláudia Colares respira, cria e se conecta com a comunidade. 
+        Descubra esse território fértil de cultura, encontro e inspiração.
+      </p>
+    </div>
+  </section>
 
-  <!-- Sessão A artista -->
+  <!-- Sessão Pomarelhos -->
+  <section class="sobre" id="pomarelhos">
+    <div class="img-col">
+      <a href="https://www.google.com/maps/place/Pomarelhos" target="_blank">
+        <img src="pomarelhos.png" alt="Pomarelhos">
+      </a>
+    </div>
+    <div class="text-col">
+      <p style="text-align: justify;">
+        A instalação do ateliê em Pomarelhos viabilizou a percepção do potencial cultural que tal atitude manifesta. Em certo sentido, implantou-se mais um núcleo cultural na região.
+        A presença desse aparelho cultural viabiliza ações culturais e educacionais voltadas para a arte e o convívio entre artistas e comunidade. 
+        A pretensão da artista Cláudia Colares com a presença deste ateliê para essa nova etapa que se iniciará no lançamento do projeto “John Cabeça de Lobo” 
+        é de consolidar este ponto cultural em Pomarelhos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Artista -->
   <section class="sobre" id="artista">
     <div class="text-col">
-      <p>
-        Claudia Colares nasceu no Ceará. Ainda miúda começou a desenhar, assim como fazem as crianças nessa fase da vida, mas Cláudia nunca mais parou.
+      <p style="text-align: justify;">
+        Cláudia Colares nasceu no Ceará. Ainda miúda começou a desenhar, assim como fazem as crianças nessa fase da vida, mas Cláudia nunca mais parou.
         Foi a partir do encontro com o Mestre cearense Batista Sena que Cláudia redimensionou sua visão sobre arte e cultura e desde então passou a dedicar-se definitivamente às artes plásticas.            
       </p>
     </div>
@@ -270,26 +301,56 @@
     </div>
   </section>
 
-  <!-- Footer -->
-   <footer id="footer">
+  
+  <!-- Sessão CTA -->
+  <section class="cta" style="background-color: #fff; color: #333; text-align: center; padding: 80px 20px;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Contato</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 30px;">
+      Cada obra é um convite ao encontro, à conversa e ao sentimento. Se você deseja saber mais sobre o processo<br> criativo, 
+      ou agendar uma visita ao ateliê, será uma alegria conversar com você.
+    </p>
+    <a href="https://wa.me/351913469871?text=Olá%20Cláudia%2C%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho."
+      target="_blank"
+      style="background-color: #000; color: #fff; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+      Entrar em contato
+    </a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer id="footer">
     <div class="container">
-      <div class="row text-center text-md-start">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <p><a href="https://wa.me/351913469871" target="_blank" style="text-decoration: none; color: inherit;">+351 913 469 871</a></p>
-          <p><a href="mailto:claudiacolares@hotmail.com" style="text-decoration: none; color: inherit;">claudiacolares@hotmail.com</a></p>
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-6 d-flex flex-column gap-2 align-items-center align-items-md-start">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+            <a href="https://wa.me/351913469871?text=Olá,%20Cláudia!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho." target="_blank">
+              <img src="whatsapp(2).png" alt="WhatsApp" style="width: 22px; height: 22px;">
+            </a>
+            <a href="https://wa.me/351913469871?text=Olá,%20Cláudia!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho." target="_blank">
+              +351 913 469 871
+            </a>
+          </div>
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+            <a href="mailto:claudiacolares@hotmail.com">
+              <img src="e-mail.png" alt="Email" style="width: 22px; height: 22px;">
+            </a>
+            <a href="mailto:claudiacolares@hotmail.com">
+              claudiacolares@hotmail.com
+            </a>
+          </div>
         </div>
-        <div class="col-md-6">
-          <p>Pomarelios, Vila Real - Portugal</p>
-          <p>© 2025 Claudia Colares All Rights Reserved | CNPJ 28789745000109</p>
+        <div class="col-md-6 mt-4 mt-md-0 text-center text-md-end">
+          <p class="mb-1">Pomarelhos, Vila Real - Portugal</p>
+          <p class="mb-0">© 2025 Claudia Colares All Rights Reserved | CNPJ 28789745000109</p>
         </div>
       </div>
     </div>
   </footer>
 
+
   <!-- Botão Voltar ao Topo -->
   <button id="voltarTopo" title="Voltar ao topo">↑</button>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     const btnTopo = document.getElementById("voltarTopo");
@@ -300,5 +361,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
+
 </body>
 </html>
